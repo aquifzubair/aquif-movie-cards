@@ -1,19 +1,21 @@
 import React from 'react';
-import Header from './components/Header';
 import './App.css';
-import Cards from './components/Cards'
+import Header from './components/Header';
+import Cards from './components/Cards';
 
-function App() {
-  return (
-    <div>
-      <Header />
-      <div className="movie-container">
-        <Cards />
+class App extends React.Component { 
+  
+  render() {
+
+    return (
+      <div>
+        <Header />
+        <Cards />        
       </div>
-      
-    </div>
-   
-  );
+     
+    );
+  }
+  
 }
 
 export default App;
