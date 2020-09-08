@@ -3,19 +3,16 @@ import './App.css';
 import Header from './components/Header';
 import Cards from './components/Cards';
 
-class App extends React.Component { 
-  
-  render() {
+const App = () =>  { 
 
     return (
       <div>
         <Header />
         <Cards />        
-      </div>
-     
+      </div>     
     );
+    
   }
   
-}
 
 export default App;

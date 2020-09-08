@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import StarRatingComponent from 'react-star-rating-component';
+import StarRatingComponent from 'react-star-rating-controlled-component';
 
 class Cards extends Component {
     constructor(props){
@@ -66,11 +66,9 @@ class Cards extends Component {
                 <div className="movie-container">
                     {renderList}
                 </div>
-            </div>
-            
+            </div>            
         )
-    }      
-    
+    }    
 }
 
 export default Cards;
