@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import StarRatingComponent from 'react-star-rating-component';
 
 class Cards extends Component {
     constructor(props){
@@ -41,7 +42,14 @@ class Cards extends Component {
                 <p className='title'>{movie.title}</p>
                 <p className='original-title'>{movie.original_title}</p>
                 <p className='overview'>{movie.overview}</p>
-                <p className='rating'>Rating:{movie.vote_average}/10</p>
+                <StarRatingComponent 
+                    name="rating"
+                    value={movie.vote_average} 
+                    starCount={10} 
+                    className='rating'
+                    starColor={'#FF0000'}
+                    emptyStarColor={'#ffffff'}
+                    />
             </div>
             )
         })

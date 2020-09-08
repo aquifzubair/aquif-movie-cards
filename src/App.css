@@ -65,8 +65,7 @@ img {
 }
 
 .rating {
-    align-self: flex-end;
-    vertical-align: bottom;
+    align-self: center;
 }
 
 .navigation {
