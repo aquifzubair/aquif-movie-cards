@@ -82,5 +82,31 @@ img {
     border-radius:5px;
     cursor:pointer;
     background-image:linear-gradient(to right, rgb(166, 240, 123), rgb(171, 189, 148));
+    
+}
+
+.btn:hover {
+    opacity: .7;
+}
+
+
+.nav-container {
+    display:flex;
+    justify-content: space-around;
+    height:30px;
+    margin-top:10px;
+}
+
+.header-btn {
+    width:200px;
+    height:30px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    background-color:rgb(166, 240, 123);
+}
+
+.header-btn:hover {
+    opacity: .7;
 }
 
