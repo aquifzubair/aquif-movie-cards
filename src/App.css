@@ -110,3 +110,29 @@ img {
     opacity: .7;
 }
 
+.about-container {
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items: center;
+    width:25%;
+    height:auto;
+    background-color:white;
+    margin:auto;
+    margin-top:40px;
+    border:1px solid grey;
+    border-radius:5px;
+    text-align:justify;
+}
+
+.about-container div {
+    padding:10px;
+}
+
+.about-img {
+    width:75%;
+    margin-left:12.5%;
+}
+
+
+
