@@ -6,7 +6,7 @@ class Cards extends Component {
         super(props)
         this.state = {
             movieList : [],
-            headerName:'Top Rated Movies'
+            headerName:'Top Rated Movies',
         }
     }
 
@@ -34,39 +34,42 @@ class Cards extends Component {
         .then(data => this.setState({movieList:data.results,headerName:'Upcoming Movies'}))
     }
 
+    
+
     render() {
         const renderList = this.state.movieList.map(movie => {
             return (
-                <div key={movie.id}>
-                <img src = {`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt= 'poster'/>
-                <p className='title'>{movie.title}</p>
-                <p className='original-title'>{movie.original_title}</p>
-                <p className='overview'>{movie.overview}</p>
-                <StarRatingComponent 
-                    name="rating"
-                    value={movie.vote_average} 
-                    starCount={10} 
-                    className='rating'
-                    starColor={'#FF0000'}
-                    emptyStarColor={'#ffffff'}
+                <div key={movie.id} >
+                    <img src = {`https://image.tmdb.org/t/p/w342${movie.poster_path}`} alt= 'poster'/>
+                    <p className='title'>{movie.title}</p>
+                    <p className='original-title'>{movie.original_title}</p>
+                    <p className='overview'>{movie.overview}</p>
+                    <StarRatingComponent 
+                        name="rating"
+                        value={movie.vote_average} 
+                        starCount={10} 
+                        className='rating'
+                        starColor={'#FF0000'}
+                        emptyStarColor={'#ffffff'}
                     />
-            </div>
+                </div>
             )
         })
 
         return(
-            <div>
-                <h1>{this.state.headerName}</h1>
+                <div>
+                    <h1>{this.state.headerName}</h1>
 
-                <div className='navigation'>
-                    <button onClick={this.renderNowPlayingMovies} className='btn'>Now Playing</button>
-                    <button onClick={this.renderTopRatedMovies} className='btn'>Top rated</button>
-                    <button onClick={this.renderUpcomingMovies} className='btn'>Upcoming</button>
-                </div>
-                <div className="movie-container">
-                    {renderList}
-                </div>
-            </div>            
+                    <div className='navigation'>
+                        <button onClick={this.renderNowPlayingMovies} className='btn'>Now Playing</button>                        
+                        <button onClick={this.renderTopRatedMovies} className='btn'>Top Rated</button>                        
+                        <button onClick={this.renderUpcomingMovies} className='btn'>Upcoming</button>
+                    </div>
+
+                    <div className='movie-container'>
+                        {renderList}
+                    </div>
+                </div>           
         )
     }    
 }

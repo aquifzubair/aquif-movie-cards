@@ -82,5 +82,57 @@ img {
     border-radius:5px;
     cursor:pointer;
     background-image:linear-gradient(to right, rgb(166, 240, 123), rgb(171, 189, 148));
+    
 }
+
+.btn:hover {
+    opacity: .7;
+}
+
+
+.nav-container {
+    display:flex;
+    justify-content: space-around;
+    height:30px;
+    margin-top:10px;
+}
+
+.header-btn {
+    width:200px;
+    height:30px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    background-color:rgb(166, 240, 123);
+}
+
+.header-btn:hover {
+    opacity: .7;
+}
+
+.about-container {
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items: center;
+    width:25%;
+    height:auto;
+    background-color:white;
+    margin:auto;
+    margin-top:40px;
+    border:1px solid grey;
+    border-radius:5px;
+    text-align:justify;
+}
+
+.about-container div {
+    padding:10px;
+}
+
+.about-img {
+    width:75%;
+    margin-left:12.5%;
+}
+
+
 
