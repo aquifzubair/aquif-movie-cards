@@ -37,6 +37,7 @@ class Cards extends Component {
     
 
     render() {
+        console.log(this.state.movieList)
         const renderList = this.state.movieList.map(movie => {
             return (
                 <div key={movie.id} >

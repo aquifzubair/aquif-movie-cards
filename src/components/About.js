@@ -7,7 +7,7 @@ const About = () => {
         <div className='about-container'>
             <div><b>About Me</b></div>
             <div>
-                <img src={Dp} alt='profile pic' class='about-img'/>
+                <img src={Dp} alt='profile pic' className='about-img'/>
             </div>
             <div><b>Name</b> : Aquif Zubair</div>
             <div>
